@@ -1,0 +1,37 @@
+body{
+width: 600px;
+margin: auto;
+}
+
+
+
+#employees li{
+    list-style: none;
+    cursor: pointer;
+    padding-left: 10px;
+    font-weight: bold;
+    border: 1px solid #aaa;
+    background: rgb(209, 209, 231);
+    margin-bottom: 5px;
+}
+#employees li.active{
+    background : #f3aa5d;
+}
+
+#employees li:hover{
+    background: #a0a0a0;
+}
+
+img{
+width: 200px;
+float: right;
+}
+#profileText{
+float:left;
+}
+
+#profileview{
+border: 1px solid #aaa;
+height: 300px;
+padding: 10px;
+}

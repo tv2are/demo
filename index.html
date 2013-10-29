@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <script src="libs/require.js" data-main="./main.js"></script>
+        <script>
+            require(["views/employeeListView"], function(Employees){
+                var view = new Employees.ListView();
+                //$("#employees").html(view.$el);
+            });
+        </script>
+    </head>
+    <body>
+        <div id="employee"></div>
+        <div id="employees">
+            <ul id="employeelist"></ul>
+        </div>
+        <div id="profileview" />
+</html>
