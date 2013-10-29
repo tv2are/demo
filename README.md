@@ -9,3 +9,4 @@ Tasks:
 - Make the application print out the new attributes
 - Add a delete button to ItemView
   - Make the button delete the li element 
+  - Make the button delete the model and rerender the EmployeeList (showing the new result) 
