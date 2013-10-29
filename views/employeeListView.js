@@ -31,14 +31,16 @@ define(['backbone', 'underscore', 'handlebars', 'jquery', 'api'], function(Backb
         tagName: "ul",
         initialize: function(){
             this.collection = new Employees.Collection(API.employees); 
-            //this.render();
+            this.render();
+        },
+        render : function(){
+            this.$el.empty();
             var self = this;
             _.each(this.collection.models, function(data){
-                console.log(data);
                 var item = new Employees.ItemView({model: data});
                 self.$el.append(item.$el);
             });
-        },
+        }
     });
 
     Employees.ItemView = Backbone.View.extend({
@@ -58,10 +60,7 @@ define(['backbone', 'underscore', 'handlebars', 'jquery', 'api'], function(Backb
             this.$el.addClass('active');
         },
         render: function(){
-            console.log("RENDER!!!!");
             var compiledTemplate = Handlebars.compile(this.template);
-            console.log("template", compiledTemplate(this.model.toJSON()));
-            console.log(this.model.toJSON());
             this.$el.html(compiledTemplate(this.model.toJSON()));
             return this;
         }

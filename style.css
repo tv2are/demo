@@ -3,8 +3,6 @@ width: 600px;
 margin: auto;
 }
 
-
-
 #employees li{
     list-style: none;
     cursor: pointer;
